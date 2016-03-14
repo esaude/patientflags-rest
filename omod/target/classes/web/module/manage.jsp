@@ -5,4 +5,6 @@
 
 <p>Hello ${user.systemId}!</p>
 
+<p>Hello ${user.username}</p>
+
 <%@ include file="/WEB-INF/template/footer.jsp"%>

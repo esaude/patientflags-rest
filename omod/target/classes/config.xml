@@ -6,41 +6,49 @@
 	<id>patientflag_rest</id>
 	<name>patientflag_rest Module</name>
 	<version>1.0-SNAPSHOT</version>
-	<package>org.openmrs.module.patientflag_rest</package>
+	<package>org.openmrs.module.patientflag_rest
+	</package>
 	<author>root</author>
 	<description>
 		A REST module to expose patient flags
 	</description>
-	<updateURL>https://modules.openmrs.org/modules/download/patientflag_rest/update.rdf</updateURL>
-	<require_version>1.8.4</require_version>
+	<updateURL>https://modules.openmrs.org/modules/download/patientflag_rest/update.rdf
+	</updateURL>
+	<require_version>1.11.4</require_version>
 	<!-- / Module Properties -->
 
-	
+
 	<!-- Required Modules -->
 	<require_modules>
-																											
+
 		<require_module version="1.3.4">
 			org.openmrs.module.patientflags
 		</require_module>
-			
+
+		<require_module version="${webservicesRestVersion}">
+			org.openmrs.module.webservices.rest
+		</require_module>
+
 	</require_modules>
 	<!-- / Required Modules -->
-	
+
 	<!-- Module Activator -->
-	<activator>org.openmrs.module.patientflag_rest.patientflag_restActivator</activator>
-	
-	
+	<activator>org.openmrs.module.patientflag_rest.patientflag_restActivator
+	</activator>
+
+
 	<!-- Adds link to admin page -->
 	<extension>
 		<point>org.openmrs.admin.list</point>
-		<class>org.openmrs.module.patientflag_rest.extension.html.AdminList</class>
+		<class>org.openmrs.module.patientflag_rest.extension.html.AdminList
+		</class>
 	</extension>
-	
+
 	<!-- Maps hibernate file's, if present -->
 	<mappingFiles>
-				
+
 		BasicExample.hbm.xml
-				
+
 	</mappingFiles>
 
 	<!-- Internationalization -->
