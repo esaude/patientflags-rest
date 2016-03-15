@@ -73,6 +73,10 @@ public class FlagsResource extends BaseDelegatingReadableResource<FlagWrapper> {
 	@Override
 	public FlagWrapper getByUniqueId(final String uniqueId) {
 
+		return this.getFlagWrapper(uniqueId);
+	}
+
+	private FlagWrapper getFlagWrapper(final String uniqueId) {
 		final Patient patient = Context.getPatientService().getPatientByUuid(uniqueId);
 		final FlagService flagService = Context.getService(FlagService.class);
 
@@ -80,7 +84,6 @@ public class FlagsResource extends BaseDelegatingReadableResource<FlagWrapper> {
 		final FlagWrapper flagWrapper = new FlagWrapper(FlagUtil.flagsConverter(flagsForPatient));
 
 		flagWrapper.setPatient(FlagUtil.patientConverter(patient));
-
 		return flagWrapper;
 	}
 }
