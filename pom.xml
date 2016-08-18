@@ -5,7 +5,7 @@
 
 	<groupId>org.openmrs.module</groupId>
 	<artifactId>patientflag_rest</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>patientflag_rest Module</name>
 	<description>A REST module to expose patient flags</description>
@@ -13,7 +13,7 @@
 
 	<developers>
 		<developer>
-			<name>root</name>
+			<name>eSaude</name>
 		</developer>
 	</developers>
 
@@ -23,9 +23,10 @@
 	</organization>
 
 	<scm>
-		<connection>scm:svn:https://svn.openmrs.org/openmrs-modules/patientflag_rest/trunk/</connection>
-		<developerConnection>scm:svn:https://svn.openmrs.org/openmrs-modules/patientflag_rest/trunk/</developerConnection>
-		<url>https://svn.openmrs.org/openmrs-modules/patientflag_rest/trunk/</url>
+		<connection>scm:git:https://github.com/esaude/openmrs-module-patientflags.rest.git</connection>
+		<developerConnection>scm:git:https://github.com/esaude/openmrs-module-patientflags.rest.git</developerConnection>
+		<url>https://github.com/esaude/openmrs-module-patientflags.rest</url>
+		<tag>HEAD</tag>
 	</scm>
 
 	<modules>
@@ -159,6 +160,16 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
 					<version>2.4</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.5.1</version>
+					<configuration>
+						<autoVersionSubmodules>true</autoVersionSubmodules>
+						<tagNameFormat>@{project.version}</tagNameFormat>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
