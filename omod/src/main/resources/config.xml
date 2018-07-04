@@ -33,8 +33,7 @@
 	<!-- / Required Modules -->
 
 	<!-- Module Activator -->
-	<activator>${project.parent.groupId}.${project.parent.artifactId}.patientflag_restActivator
-	</activator>
+	<activator>${project.parent.groupId}.${project.parent.artifactId}.PatientflagRestActivator</activator>
 
 
 	<!-- Adds link to admin page -->
